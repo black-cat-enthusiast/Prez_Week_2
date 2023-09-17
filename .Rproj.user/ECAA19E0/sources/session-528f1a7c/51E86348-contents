@@ -1,0 +1,320 @@
+---
+title: "Presentation Ninja"
+subtitle: "⚔<br/>with xaringan"
+author: "Yihui Xie"
+institute: "RStudio, PBC"
+date: "2016/12/12 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    self_contained : true
+    seal: false
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+<center>
+
+# PSY490: Current Topics in Neuroscience 
+
+## Jennet Baumbach 
+
+#### Sept 8th 2023
+
+![](https://alleninstitute.org/wp-content/uploads/2023/01/microglia_scishots-1.gif)
+
+---
+
+# PSY490 Seminar: Current topics in neuroscience
+
+--
+
+### - General Class Format: 
+
+--
+  - Scheduled time slot Fridays 12-3pm  
+
+--
+    + 1hr + lecture (from me)
+    
+    + 1.5 hour article summary / discussion (student-led)
+
+--
+
+### - primarilly a seminar style course
+
+--
+
+- discussion is encouraged at any time! Please interject by raising your hand :) 
+
+--
+
+### - Make nametags, address eachother by name as much as possible
+
+---
+
+# Class Format Today:
+
+--
+
+- ### Introductions :) 
+
+--
+
+- ### Review the syllabus
+
+--
+    + Explicitly break down deliverables and grading expectations
+
+--
+
+- ### Select presentation partners and weeks to present
+
+---
+
+# Introductions
+
+--
+
+- No fun facts!
+
+--
+
+### 1. Name (& preferred pronouns if you wish)
+
+--
+
+### 2. Major & year of study 
+
+--
+
+### 3. Reason for taking this course 
+
+---
+
+# Grade Breakdown
+
+--
+
+## 1. 20% - Seminar participation
+
+--
+
+## 2. 30% - Presentation
+
+--
+
+## 3. 25% - In-class test
+
+--
+
+## 4. 25% - Final assignment
+
+---
+
+# Grade Breakdown
+
+--
+
+## 1. 20% - Seminar participation
+
+--
+
+  - 10% - Attendance
+
+--
+  
+  - 10% - Participation
+
+--
+    + Both *quality* and *quantity* of contributions to seminar discussions are considered in marks. 
+    
+--
+
+**You must sign in to get marks for attendance to seminar!** 
+
+--
+
+  - I will note contributions to discussion throughout the class
+  
+--
+
+  - Student contributions are more important than anything I have to contribute to seminar discussion
+
+--
+
+### There is no ceiling for seminar marks!!
+
+---
+
+# Grade Breakdown
+
+--
+
+## 2. 30% - Presentation
+
+--
+
+- In *pairs*, you will summarize and lead a discussion on a recent neuroscience journal article. 
+
+--
+
+- I will return your grade & presentation feedback the week after your presentation. 
+
+--
+
+- Rubric is available to you online to review prior to your presentation.
+
+---
+
+--
+
+```{r,echo=FALSE,warning=FALSE,message=FALSE,out.width="75%",fig.align='center'}
+library(pdftools)
+library(magick)
+library(usethis)
+a <- magick::image_read_pdf("presentation_rubric.pdf",pages=1)
+a
+```
+
+---
+
+# Grade Breakdown
+
+--
+
+## 3. 25% in-class test
+
+--
+
+- Date: October 27th (after reading week).
+    + No lecture or class afterwards
+
+--
+
+- Intended to evaluate comprehension of neuroscience research techniques & approaches that were discussed during seminar. 
+
+--
+
+- Grades will be returned before the drop deadline (Nov 6th).
+
+--
+
+- No tricksy questions; will likely be heavily fill-in-the-blank.
+
+--
+
+- Content will come from class lectures (slides and discussion) and from the weekly assigned articles (both content and class discussion).
+
+---
+
+# Grade Breakdown
+
+--
+
+## 4. 25% Written Assignment 
+
+--
+
+- Due Dec. 7th (last day of classes)
+
+--
+    + Submissions will be accepted ahead of time
+
+--
+
+- Reviewer-style write-up on the same article that you presented during seminar. 
+
+--
+    + 2-3 page write up summarizing and commenting on the article that you used for your presentation. 
+
+--
+
+- You may feel free to incorperate the seminar discussion on your topic into your write up. 
+
+--
+
+- I will ensure that a detailed rubric is available to you well in advance of the assignment deadline.
+
+---
+
+# Questions about grades? 
+
+---
+
+# Course topics
+
+--
+
+### Techniques-focused
+
+--
+
+- Most current high-level papers in neuroscience involve many complicated techniques
+
+--
+
+- Understanding *how* and *why* the researchers are choosing their approaches is foundational to current neuroscience
+
+--
+  + And to evaluating the author's methodological approach. 
+  
+--
+
+#### Combinations of sophistocated techniques *is* current neuroscience 
+
+--
+
+- The goal of this course is to build a strong technical understanding of available tools
+
+--
+    + and how they can be applied to neuroscience research. 
+
+---
+
+# Course topics
+
+--
+
+- Intended to build upon one another
+
+--
+
+- First half of the course (up until the test - Oct 27 / Week 7), the focus will be on *output* measures in neuroscience 
+
+--
+    1. Behaviour
+    
+    2. Post-morterm analysis of brain tissue 
+    
+    3. Electrical recordings from brain cells
+
+--
+
+- Second half of the course will focus on more complex papers that involve combinations of techniques. 
+
+---
+
+```{r,echo=FALSE,warning=FALSE,message=FALSE,out.width="65%",fig.align='center'}
+a <- magick::image_read_pdf("Notetaker_Flyer.pdf",pages=1)
+a
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,145 @@
+---
+title: "Week #2 Discussion Article Summary"
+author: "JLB"
+date: "2023-09-13"
+output: html_document
+---
+
+**Article title: *Automated behavioural analysis reveals the basic behavioural repertoire of the urochordate Ciona intestinalis***
+
+## Summary of introduction 
+
+The text discusses the use of modern computational tools and high-resolution video recording to study and analyze the behaviors of various animal species. Researchers have employed automated behavioral analysis to categorize behaviors in laboratory organisms such as worms, flies, zebrafish, and mice. The focus then shifts to the larval form of the tunicate Ciona intestinalis, a model organism with a chordate body plan, making it relevant for evolutionary and neurobiological studies.
+
+Ciona intestinalis is particularly valuable for studying chordate evolution due to its genetic toolkit, sequenced genome, and well-documented nervous system. The text describes the behavior of Ciona larvae, including their gravitotactic and phototactic responses, swimming activities, and sensitivity to light. It also highlights the potential for studying the genetic basis of these behaviors in Ciona.
+
+The study discussed in the text presents a detailed characterization of C. intestinalis larval behavior using automated tracking software and custom analysis methods. It identifies distinct behavioral clusters and reveals that these larvae can enter a state of sensory arousal and exhibit thigmotactic behavior. The text also mentions the influence of drugs and rearing conditions on behavioral descriptors. Overall, the study demonstrates the power of behavioral analysis in understanding the behavior of this model organism.
+
+## Summary of Methods
+
+#### Animal Collection and Rearing Conditions:
+
+- Adult Ciona intestinalis were collected from various sites in the Bergen area.
+- The animals were kept in a controlled facility with filtered seawater at 10°C and constant illumination to stimulate egg production.
+- Eggs and sperm were obtained from individual animals for in vitro fertilization.
+- The effects of dechorionation and different rearing temperatures were studied.
+
+#### Set-up for Behavioral Experiments:
+
+- A custom-built behavioral setup was used, centered around a Nikon SMZ1500 stereomicroscope.
+- Single-use agarose arenas were created using 3D printing technology.
+- Dark-field illumination with infrared (IR) LEDs was used to track larval movements without stimulating their photoreceptors.
+- Light stimulation was provided using green LEDs and an IR filter.
+- Videos were recorded using an IR-sensitive monochrome camera.
+- An Arduino-based circuit controlled stimuli and temperature.
+
+#### Recordings:
+
+- Larvae were placed in agarose arenas, and their behavior was recorded.
+- Behavioral experiments involved acclimatization periods and 5-minute video recordings.
+- Larvae were recorded for a maximum of 30 minutes.
+- Different age groups of larvae were used for various experiments.
+
+#### Video Conversion and Analysis:
+
+- Videos were analyzed using the ToxTrac software, which tracked the position of the animals.
+- Image enhancement techniques, including histogram equalization and noise reduction, were applied to the video frames.
+- The ID algorithm was used to track larval movement, and approximately 710 animals were analyzed.
+
+#### Behavioral Parameters:
+
+- Various behavioral parameters were derived from the tracked data, including speed, acceleration, turns, and thigmotactic behavior.
+- A new descriptor called the Activity Coefficient (AC) was introduced to quantify locomotor activity.
+- Path complexity was quantified to measure the predictability of larval trajectories.
+
+#### Clustering and Classifying of Behavioral Modes:
+
+- Unsupervised clustering of the behavioral data was performed using an agglomerative clustering algorithm.
+- Twelve clusters were identified, each corresponding to a distinct behavioral mode.
+- A K-Nearest-Neighbours classifier was trained to classify larval traces based on these clusters.
+- The behavioral modes were given descriptive names and ordered by speed of movement.
+
+#### Statistics:
+
+- Nonparametric statistical tests were used due to the non-normally distributed nature of the data.
+- Tests such as Levene's test, Kruskal-Wallis analysis of variance, and Mann-Whitney U test were employed to assess statistical significance.
+- Comparisons between distributions were made using Mahalanobis distances and χ2 statistics.
+- Detailed n-values for animals, experiments, and batches were provided in supplemental tables.
+
+In summary, these methods were used to comprehensively study the behavior of Ciona intestinalis larvae, including the development of a behavioral ontology to categorize different modes of behavior. The study employed advanced technology and analysis techniques to gain insights into the behavior of this model organism.
+
+## Summary of Results
+
+In this study, researchers conducted a series of experiments to investigate the behavior of Ciona intestinalis larvae under various conditions and developmental stages. They utilized a custom-built behavioral setup and recorded larval behavior in different scenarios, including acclimatization to a tracking arena, the effect of modafinil on thigmotaxis (behavior near the walls of the arena), the influence of larval crowd size, developmental changes in behavior, temperature effects on behavior, and the impact of dechorionation on behavior.
+
+1. **Acclimatization to the Arena**: The researchers first assessed how Ciona larvae adapt to a new environment, specifically a tracking arena. They found that when larvae were introduced to the arena, their behavior changed initially, characterized by increased speed and more unpredictable trajectories. However, within approximately 6 minutes, the larvae adapted to the arena, and their behavior became more stable, with lower path complexity and a higher activity coefficient. This observation suggests that the larvae undergo an acclimatization process upon exposure to a new environment.
+
+2. **Thigmotaxis and Modafinil Effect**: Thigmotaxis, or the tendency to stay close to the walls of the arena, was examined in Ciona larvae. Contrary to some findings in other animals, the researchers did not observe strong thigmotaxis during the initial acclimatization period. They also investigated the effects of modafinil, a drug that affects dopamine and norepinephrine transporters, on thigmotaxis. The larvae exposed to 20 mg/l of modafinil exhibited increased thigmotaxis, spending more time near the walls of the arena, and higher activity levels compared to the control group. However, the lower dose of 2 mg/l modafinil did not have a significant effect.
+
+3. **Behavioral Effects of Larval Crowd Size**: The study examined how larval group size influences behavior. They found that the presence of conspecifics (other larvae) had small but noticeable effects on behavior. Larvae in larger groups showed slightly lower path complexity and a higher tendency to exhibit less active behaviors compared to those in smaller groups. However, group size did not significantly affect median speed, maximum speed, or the distance from the arena center.
+
+4. **Changes in Behavior Due to Post-Hatching Development**: The researchers studied the development of baseline behavior in Ciona larvae during the early hours post-hatching. They observed that immediately after hatching, larvae were mostly inactive, followed by a period of highly active twitching and tail flicking. Later, the larvae exhibited more extended bursts of active swimming behavior. Median and maximum speeds increased with age, along with an increase in activity coefficient. However, the behavioral modes showed that the younger larvae exhibited more twitching behavior and less directed swimming.
+
+5. **Rearing Temperature Effects**: The study explored the impact of rearing temperature on larval behavior. Larvae reared at 18°C exhibited some differences in behavior compared to those reared at 14°C. They displayed higher maximum speeds and spent more time near the walls of the arena (thigmotaxis). However, median speed, activity coefficient, and path complexity did not show significant differences between the two rearing temperature groups.
+
+6. **Dechorionation Effects**: Dechorionation, the removal of the chorion (egg membrane), was examined for its impact on larval behavior. Dechorionated larvae exhibited higher median and maximum speeds compared to chorionated larvae. Thigmotaxis was also more pronounced in dechorionated larvae, as indicated by higher TTO and TDO values. The dechorionated larvae showed an increased representation of higher swimming speeds and different behavioral modes.
+
+In summary, the researchers conducted a comprehensive analysis of Ciona intestinalis larval behavior under various conditions, including acclimatization, drug exposure, group size, developmental stages, rearing temperature, and dechorionation. Their findings provide valuable insights into the behavioral plasticity of these larvae and the factors that influence their locomotor patterns and responses to environmental changes.
+
+## Summary of Discussion 
+
+In this study, researchers focused on Ciona intestinalis larvae as a model organism for neuroethological studies. They developed a sophisticated automated behavior analysis pipeline for these larvae, utilizing custom-built hardware and ToxTrac, an open-source tracking software. The study aimed to understand various aspects of larval behavior under different conditions and developmental stages.
+
+The researchers categorized the larval behavioral repertoire into 11 basic modes, providing an unbiased method to analyze complex behavioral phenotypes resulting from genetic, pharmacological, or optogenetic interventions. They found that environmental factors, such as rearing conditions and sensory cues, influenced larval swimming strategies. Path complexity was affected differently by sensory arousal and crowd size.
+
+One significant finding was that Ciona larvae exhibited a state of arousal within the first few minutes of being placed in a new environment. This phenomenon may be linked to sensory circuits and molecular mechanisms involving neuropeptides and monoamine signaling.
+
+Thigmotaxis, the tendency to stay near the walls of the arena, was observed in some larvae, possibly serving as a defensive response or aiding in habitat selection for settlement. The researchers also noted that the drug modafinil affected thigmotaxis levels, suggesting a common mechanism across different species.
+
+Age-dependent changes in behavior were observed, with younger larvae exhibiting more twitching behavior and older larvae showing longer bursts of active swimming. These developmental changes may be associated with neural differentiation and connectivity.
+
+Rearing temperature had a significant impact on larval behavior, with higher temperatures leading to faster post-hatching development and alterations in swimming patterns. Dechorionation, the removal of the egg membrane, resulted in increased speed and thigmotaxis in larvae.
+
+Lastly, the presence of conspecifics influenced behavior, with larger groups of larvae exhibiting slightly different behavioral metrics.
+
+The study concludes by emphasizing the potential for using Ciona intestinalis larvae as a model for medium and high-throughput pharmacological screens and the importance of future research into the molecular and cellular mechanisms underlying their behaviors.
+
+## Critiques of the article
+
+- Figures should follow convention (control goes on the left)
+- Use of the term "wild-type" to refer to untreated animals is unusual in the absence of genetic manipulations. Perhaps change to "untreated" to improve clarity.
+- Polar plots are difficult to make sense of and require more unpacking / interpretation in the test to justify their inclusion throughout the figure panels. 
+- Please state the nature of the data being displayed in the figure legends (e.g. mean +/- SEM..)
+- What is the value of using the error bars to show the range of the data? Could this not be more eloquently accomplished by using all the individual data points? (which would leave the error bars available to show something else like SEM or SD or CI)
+- Overuse of significance indicators in the charts. Only effects that are discussed in the text should be ***'d in the panels. 
+
+## Discussion points
+
+- Relation to the lecture on behaviour: Here, the authors are using a "ground-up" quantification of the behavioural repertoire 
+  + Methods of designing follow-up experiments that would relate the behavioural findings to their neural underpinnings? (ie, authors suggest that developmental changes could be related to neural developmental changes - ways to test?)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

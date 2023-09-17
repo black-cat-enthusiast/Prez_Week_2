@@ -1,0 +1,326 @@
+---
+title: "Presentation Ninja"
+subtitle: "⚔<br/>with xaringan"
+author: "Yihui Xie"
+institute: "RStudio, PBC"
+date: "2016/12/12 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    seal: false
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+<center>
+
+# Quantification of Behaviour in Neuroscience
+
+### Jennet Baumbach
+
+### September 15th 2023
+
+<img src = "https://media2.giphy.com/media/eljCVpMrhepUSgZaVP/giphy.gif?cid=ecf05e479cxcoknwf2gzak1xi7wujabofvq75kddc7hh3dse&ep=v1_gifs_search&rid=giphy.gif&ct=g",width="350" height="350"/>
+
+---
+
+## The Importance of Behaviour to Neuroscience 
+
+--
+
+### **Monistic** view point: behaviour is the summated output of the underlying neural processes. 
+
+--
+
+*Behaviour is the summated output of the underlying neural processes.*
+
+--
+
+- Alterations in behavioural output represents changes in the underlying neuronal processes
+
+--
+
+- Most complex behaviours involve numerous component processes
+
+---
+
+# Lecture Overivew
+
+### 1. Historical Perspective
+
+### 2. Connection between Brain & Behaviour
+
+### 3. Design and implementation of behavioural paradigms in research 
+
+### 4. Animal behaviour as a "readout" for brain function
+
+### 5. Tools for studying animal behaviour
+
+---
+
+# Historical Perspective
+
+### The mind-body problem (aka monism vs. dualism)
+    
+- **Dualism**: the idea that the mind and body are separate (distinct) entities
+
+- Aristotle (300 BCE), Plato (400 BCE), Rene Decartes (1600's)
+
+- Rationalized that the body and the "soul" or the "mind" were clearly distinct 
+    + the death of the body is separate from the existance of the soul
+
+---
+
+# Historical Perspective
+
+### The mind-body problem (aka monism vs. dualism)
+
+- The dualist perspective was challenged by the 
+
+- **Paul Brocca** (1861) linked behavioural defects in clinical populations with brain lesion (identified during post-morterm analysis)
+    + Indicated that there was localization of specific cognitive function distributed across the cortex.
+    + e.g. speech perception versus speach production
+
+---
+
+# Historical Perspective
+
+### Early neuroscience (1800's - 1950's) relied heavilly on behaviour. 
+
+Clinical case studies: e.g. Phineas Gage (1848)
+
+.pull-left[
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/28/Phineas_gage_-_1868_skull_diagram.jpg",width="350" height="300">
+]
+
+.pull-right[
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Phineas_Gage_Cased_Daguerreotype_WilgusPhoto2008-12-19_EnhancedRetouched_Color.jpg/600px-Phineas_Gage_Cased_Daguerreotype_WilgusPhoto2008-12-19_EnhancedRetouched_Color.jpg",width="350" height="300">
+]
+
+**Post-injury behavioural patterns** provided support for cerebral localization and information about the role of the damaged brain region (PFC).
+---
+
+# Historical Perspective
+
+### Between the 1990's-recently, focus shifted towards molecular approaches.
+
+---
+
+# Historical Perspective
+
+### Recent renewed interest in the study of behaviour. 
+
+---
+
+## Animal Behaviour as a Readout for Brain Function
+
+- Developmental perspective 
+- Lesion studies
+- Necessity vs sufficiency
+
+---
+
+# The Connection between Brain & Behaviour
+
+### Key issues with the reductionist persepecitve on beahvioural outputs
+
+---
+
+# Behavioural Paradigms in Research
+
+### The importance of well-defined behavioural tests
+
+#### Reliability (*does the measure produce consistent results*)
+
+- test-retest reliability (within or between individuals)
+
+- inter-rater reliability
+
+#### Validity (*are you really quantifying what you think you're measuring?*)
+
+- face validity 
+
+- pharmacological validity
+
+- transnational validity
+
+---
+
+# Hierarchical Framework of Scientific Thought
+
+### **Theory**: A unifying scientific concept that is supported by many individual pieces of evidence. 
+
+- Examples: Evolution, relativity. 
+- Individual scientists do not generally interact directly with theories on a day-to-day basis
+    + e.g. no grant proposal aims to tackle a theory. 
+- Acts as the conceptual starting point for researchers. 
+
+---
+
+# Hierarchical Framework of Scientific Thought
+
+### **Model**: deals with one chunk of a scientific theory
+
+#### (1) Unifying models 
+
+Are large, and typically fairly crystallized.
+
+- e.g. the genetic basis of inheritance, epigenetics. 
+    + Provide mechanistic insight into the overarching theory of evolution. 
+
+#### (2) Working models
+
+Which are typically smaller in scope and often more flexible. 
+
+- A unifying model could encompass many working models
+
+- e.g. Epigenetics: DNA methylation, histone modifications, histone variants.
+
+---
+
+# Hierarchical Framework of Scientific Thought
+
+### **Hypothesis**: isolates one experimentall-testable aspect of a aworking model. 
+
+- Facilitates the formation of *testable predictions* that are usually directionally-specific. 
+
+- A hypothesis can never be "proven correct" 
+    + it can only be "not disproven" 
+    
+- A hypothesis gains support through repeated testing of its predictions. 
+
+- The wording of the hypothesis should lend itself well to discussion and rigorous experimental design.
+
+- "Hypothesis driven" writing is the gold standard for research reports, grant applications and thesis projects. 
+
+---
+
+# Hierarchical Framework of Scientific Thought
+
+### **Experiment**: An emperically designed series of steps designed to investigate whether the predictions will be true. 
+
+- Involves some kind of control group.
+
+- Either quasi-experimental or true experimental design. 
+    + quasi- examples: Males versus females, clinical populations versus healthy control group. 
+
+- Differentiation from "study" in psychology.
+
+---
+
+# Styles of Experiments 
+
+#### 1. Observe: An initial observed association between two things (e.g. A, C) initiates the research design process. 
+
+Design hypothesis: A -> B -> C 
+
+#### 2. Measure: Confirm that A causes B
+
+#### 3. Block: inhibiting B should prevent A from causing C
+
+Design an experiment to prevent B while leaving the processes that cause A and C intact
+
+#### 4. Mimic: experimentally manipulating B should prdoduce C 
+
+Design an experiment to alter B to investigate whether this will alter the extent to which A produces C
+
+---
+
+# Behavioural Paradigms in Research
+
+### Example: Tasks to investigate memory in the lab
+
+Non-aversive memory measures 
+
+- Operate on the basis that animals have a **preference for novelty**
+
+  + Robust cross-species examples of this preference
+
+---
+
+# Behavioural Paradigms in Research
+
+### Example: Tasks to investigate memory in the lab
+
+Aversive memory measures 
+
+
+---
+
+## Challenges and Limitations
+
+### Variability
+
+### Complex Nature of Animal Behavior
+
+- Contextual considerations: generally animals are tested one at a time in novel behavioural contexts. 
+
+- Natural complexities: very difficult to confidently identify playing versus aggressive behaviour
+
+---
+
+## Future Directions in animal behavioural research
+
+#### Improvements in the quantification of behavioural data provide richer, more complex datasets.
+
+- Much more efficient (e.g. eliminiates the need to sit scoring videos for many hours)
+
+- Can use an exhaustive approach combined with unbiased clustering methods. 
+
+.pull-left[
+![](https://camo.githubusercontent.com/73522e0a8dd3665629c1969acb5dc23fc8c6fa890eba3aed0f5867ec62d1cde3/68747470733a2f2f696d616765732e73717561726573706163652d63646e2e636f6d2f636f6e74656e742f76312f3537663664353163396637343536366635356563663237312f313631393630393839373131302d544b5354574b454d3648544758494439443438392f6b6531375a77644742546f6464493870446d34386b41766a763674575f656f6a59516d4e55306e63626c6c5a772d7a505067646e346a557756634a45315a7657457454357542535257743476515a4167544a75636f547171586a533343664e4453757566333165307456484253545848746a554b6c685274574a31566f366c31423262784a7442797657536a4c36567a33616d6335796238426f6461725456727a495743703732696f57772f7472694d6f757365444c432e6769663f666f726d61743d33303077)
+]
+
+.pull-right[
+![](https://camo.githubusercontent.com/e1f2bb5ab709f39459565def9c619e8e8c2734bb80c30c0ab2677c33af38d7f9/68747470733a2f2f737461746963312e73717561726573706163652e636f6d2f7374617469632f3537663664353163396637343536366635356563663237312f742f3563336662643063383938353833343137613034306466632f313534373638313035333230312f7261742d67726173702e6769663f666f726d61743d33303077)
+]
+
+---
+
+## Future Directions in animal behavioural research
+
+### Improvements in the complexity of statistical analysis allow for richer interpreatins about behavioural patterns 
+
+- e.g. Time-series based analyses (a concept borrowed from finance)
+
+<center>
+
+<img src = "https://cdn.corporatefinanceinstitute.com/assets/Time-Series-Analysis-1024x729.png",width="350" height="350"/>
+
+---
+
+<center> 
+
+# Questions ? :) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
